@@ -5,5 +5,13 @@ spring:
     consul:
       host: 127.0.0.1  # 默认是localhost
       port: 8500 #默认
-      config:
-        prefix: config #默认
+#      config:
+#        prefix: spring-cloud-demo #默认
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+server:
+  port: 9980
